@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "5aeb9721-b3b1-47a8-a6f5-9febded0954b",
+		"name": "MimicalThus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Similar behaviors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/behaviors?email=admin@admin.com&offset=0&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"behaviors"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@admin.com"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Similar passions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/passions?email=admin@admin.com&offset=0&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"passions"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@admin.com"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"newEmail@new.com\",\r\n    \"name\":\"Nuovo\",\r\n    \"surname\":\"utente\",\r\n    \"passions\":[\r\n        {\r\n            \"name\":\"Playing the Stock Market\",\r\n            \"value\": 7\r\n        },\r\n        {\r\n            \"name\":\"Catering\",\r\n            \"value\": 2\r\n        }\r\n    ],\r\n    \"behaviors\":[\r\n        {\r\n            \"name\":\"Ambitious\",\r\n            \"value\": 5\r\n        },\r\n        {\r\n            \"name\":\"Conscientious\",\r\n            \"value\": 9\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/profile?email=admin@admin.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"profile"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@admin.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "Arena",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "12jnb1j22-3ki21n",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
